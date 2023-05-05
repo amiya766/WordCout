@@ -1,0 +1,18 @@
+void CharCount()
+ 3 {
+ 4     FILE *fp;
+ 5     int charCount = 0;
+ 6     char ch;//读取文件返回的字节
+ 7     if((fp = fopen("test.txt","r")) == NULL)
+ 8     {
+ 9         printf("文件打开失败.");
+10     }
+11     ch = fgetc(fp);
+12     while(ch != EOF)
+13     {
+14             charCount++;
+15             ch = fgetc(fp);
+16     }
+17     printf("字符数为：%d个.\n",charCount);
+18     fclose(fp);
+19 } 
